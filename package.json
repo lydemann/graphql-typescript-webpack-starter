@@ -1,0 +1,43 @@
+{
+  "name": "graphql-typescript-webpack-starter",
+  "version": "1.0.0",
+  "description": "A starter template for GraphQL in Typescript build with Webpack.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.dev.config.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Graphql",
+    "Webpack",
+    "Typescript",
+    "Node",
+    "Express",
+    "Apollo"
+  ],
+  "author": "Christian Lüdemann",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "inversify": "^4.10.0",
+    "reflect-metadata": "^0.1.12",
+    "tslib": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.8",
+    "@types/express": "^4.11.1",
+    "@types/graphql": "^0.12.3",
+    "@types/jest": "^22.1.1",
+    "@types/node": "^9.4.1",
+    "@types/node-fetch": "^1.6.7",
+    "graphql-tag": "^2.7.3",
+    "tslint": "^5.9.1",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.7.1",
+    "webpack": "^3.10.0"
+  }
+}
