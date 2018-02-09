@@ -11,17 +11,27 @@ export class Server {
     public expressServer;
 
     constructor(
-        @inject(Types.GraphQLServer) private graphqlServer: GraphQLServer
+        @inject(Types.GraphQLServer) private graphqlServer: GraphqlServer,
     ) {
-        
+        this.expressServer = express();
+        this.setupMiddleware();
+        this.graphqlServer.express = this.expressServer;
     }
 
     public start(): void {
         this.graphqlServer.start();
     }
 
+    /**
+     * stop
+     */
+    public stop(): void {
+        this.graphqlServer.stop();
+    }
+
     private setupMiddleware() {
         this.expressServer.use(cors());
         this.expressServer.use(bodyParser.urlencoded({ extended: true }));
+        this.expressServer.use(bodyParser.json());
     }
 }

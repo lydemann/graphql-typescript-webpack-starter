@@ -1,9 +1,11 @@
+import { injectable } from 'inversify';
 
+@injectable()
 export class Config {
 
-    public readonly graphQLPort: number;
+    public readonly port: number;
 
     constructor() {
-        this.graphQLPort = Number(process.env.PORT) || 8080;    
+        this.port = Number(process.env.PORT) || 8080;
     }
 }
