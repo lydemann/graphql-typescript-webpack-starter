@@ -61,5 +61,25 @@
     "typescript": "2.6.2",
     "webpack": "3.10.0",
     "webpack-node-externals": "^1.6.0"
+  },
+  "jest": {
+    "transform": {
+      "\\.(gql|graphql)$": "jest-transform-graphql",
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "mapCoverage": true,
+    "testEnvironment": "node",
+    "testRegex": ".*\\entry\\.spec\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.d.ts",
+      "!src/index.ts",
+      "!src/interfaces/**/*.ts"
+    ]
   }
 }
